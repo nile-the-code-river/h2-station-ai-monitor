@@ -9,6 +9,7 @@
         Title="H2 Station AI Monitor"
         Height="1120" Width="1920"
         WindowStyle="None"
+        AllowsTransparency="True"
         ResizeMode="CanResize"
         Background="#3F3F3F">
     <Viewbox Stretch="Fill">
@@ -56,9 +57,22 @@
                     BorderThickness="0"
                     Cursor="Hand"
                     Click="CloseButton_Click">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Button">
+                                        <ContentPresenter HorizontalAlignment="Center"
+                                            VerticalAlignment="Center"/>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Button.Style>
+
                     <Image Source="/Images/close.png"
-                Width="14" Height="15"
-                Stretch="Fill"/>
+                        Width="14" Height="15"
+                        Stretch="Fill"/>
                 </Button>
             </Grid>
 
