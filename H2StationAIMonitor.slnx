@@ -1,5 +1,6 @@
 <Solution>
   <Project Path="H2StationAIMonitor.AcdAppClient/H2StationAIMonitor.AcdAppClient.csproj" />
+  <Project Path="H2StationAIMonitor.Core.Test/H2StationAIMonitor.Core.Test.csproj" Id="05dff475-139e-4961-8181-e0632ecec494" />
   <Project Path="H2StationAIMonitor.Core/H2StationAIMonitor.Core.csproj" />
   <Project Path="H2StationAIMonitor.Shared/H2StationAIMonitor.Shared.csproj" />
   <Project Path="H2StationAIMonitor.Wpf/H2StationAIMonitor.Wpf.csproj" />
