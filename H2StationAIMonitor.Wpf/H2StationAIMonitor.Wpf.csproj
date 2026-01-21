@@ -18,28 +18,36 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Page Include="App.xaml" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Resources\Images\charging-car.png">
+    <ProjectReference Include="..\H2StationAIMonitor.Core\H2StationAIMonitor.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\Images\charging-car.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Resources\Images\close.png">
+    </Content>
+    <Content Include="Resources\Images\close.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Resources\Images\download.png">
+    </Content>
+    <Content Include="Resources\Images\download.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Resources\Images\sample-screen.png">
+    </Content>
+    <Content Include="Resources\Images\sample-screen.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Resources\Images\speaker.png">
+    </Content>
+    <Content Include="Resources\Images\speaker.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Resources\Images\waiting-car.png">
+    </Content>
+    <Content Include="Resources\Images\waiting-car.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
+    </Content>
   </ItemGroup>
 
 </Project>

@@ -70,7 +70,7 @@
                         </Style>
                     </Button.Style>
 
-                    <Image Source="/Images/close.png"
+                    <Image Source="/Resources/Images/close.png"
                         Width="14" Height="15"
                         Stretch="Fill"/>
                 </Button>
