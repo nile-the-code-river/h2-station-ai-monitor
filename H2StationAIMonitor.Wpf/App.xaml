@@ -4,6 +4,41 @@
              xmlns:local="clr-namespace:H2StationAIMonitor.Wpf"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <!-- 공통 버튼 -->
+        <Style x:Key="RoundedButtonStyle" TargetType="Button">
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                        CornerRadius="10"
+                        SnapsToDevicePixels="True">
+                            <ContentPresenter
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        TextElement.Foreground="{TemplateBinding Foreground}"
+                        Content="{TemplateBinding Content}"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!--헤더-->
+        <Style x:Key="SectionHeaderBorderStyle" TargetType="Border">
+            <Setter Property="Background" Value="#646464"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Padding" Value="10,0,0,0"/>
+        </Style>
+
+        <!--헤더 타이틀-->
+        <Style x:Key="SectionHeaderTextStyle" TargetType="TextBlock">
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
     </Application.Resources>
 </Application>

@@ -4,9 +4,97 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:H2StationAIMonitor.Wpf"
+        xmlns:views="clr-namespace:H2StationAIMonitor.Wpf.Views.Panels"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="H2 Station AI Monitor"
+        Height="1120" Width="1920"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        ResizeMode="CanResize"
+        Background="#3F3F3F">
+    <Viewbox Stretch="Fill">
+        <Grid Background="#3F3F3F">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="30" />
+                <RowDefinition Height="190" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="817" />
+                <RowDefinition Height="30" />
+            </Grid.RowDefinitions>
 
-    </Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="25" />
+                <ColumnDefinition Width="1020" />
+                <ColumnDefinition Width="20" />
+                <ColumnDefinition Width="405" />
+                <ColumnDefinition Width="20" />
+                <ColumnDefinition Width="405" />
+                <ColumnDefinition Width="25" />
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.ColumnSpan="7">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <Border Background="Transparent"
+                    MouseLeftButtonDown="Header_MouseLeftButtonDown">
+                    <TextBlock Text="H2 Station AI Monitor"
+                    Foreground="White"
+                    FontSize="16"
+                    FontWeight="SemiBold"
+                    VerticalAlignment="Center"
+                    Margin="16,0,0,0"/>
+                </Border>
+
+
+                <Button Grid.Column="1"
+                    Width="40" Height="40"
+                    Margin="0,5,10,5"
+                    Background="Transparent"
+                    BorderThickness="0"
+                    Cursor="Hand"
+                    Click="CloseButton_Click">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Button">
+                                        <ContentPresenter HorizontalAlignment="Center"
+                                            VerticalAlignment="Center"/>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Button.Style>
+
+                    <Image Source="/Images/close.png"
+                        Width="14" Height="15"
+                        Stretch="Fill"/>
+                </Button>
+            </Grid>
+
+            <Grid Grid.Row="2" Grid.Column="1" Grid.RowSpan="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <views:CctvStreaming />
+                <views:CctvStreaming Grid.Column="1" />
+                <views:CctvStreaming Grid.Row="1"/>
+                <views:CctvStreaming Grid.Row="1" Grid.Column="1" />
+            </Grid>
+
+            <views:StationStatus Grid.Row="2" Grid.Column="3" />
+            <views:AlertStatus Grid.Row="2" Grid.Column="5" />
+            <views:EventLogs Grid.Row="4" Grid.Column="3" Grid.ColumnSpan="3" />
+        </Grid>
+    </Viewbox>
 </Window>

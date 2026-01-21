@@ -20,5 +20,26 @@ namespace H2StationAIMonitor.Wpf
         {
             InitializeComponent();
         }
+
+        private void Header_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ClickCount == 2)
+            {
+                // 더블클릭: 최대화/복원
+                WindowState = (WindowState == WindowState.Maximized)
+                    ? WindowState.Normal
+                    : WindowState.Maximized;
+                return;
+            }
+
+            // 드래그 이동
+            DragMove();
+
+        }
+
+        private void CloseButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
