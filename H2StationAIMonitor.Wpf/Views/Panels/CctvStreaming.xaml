@@ -11,7 +11,8 @@
                Foreground="#5A0D0D" FontSize="24"/>
 
         <!--screen-->
-        <Image Source="/Resources/Images/sample-screen.png" Stretch="UniformToFill" />
+        <!--<Image Source="/Resources/Images/sample-screen.png" Stretch="UniformToFill" />-->
+        <Image Source="/Resources/Images/black-screen.png" Stretch="UniformToFill" />
 
         <!--header-->
         <Grid VerticalAlignment="Top">
